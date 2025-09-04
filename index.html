@@ -158,7 +158,7 @@
     opacity: 0.7;
 }
 
-#countdown {
+#countdown span {
     content: ':';
     animation: blink 1s infinite step-end;
 }
@@ -168,11 +168,11 @@
     50% { opacity: 0; }
   }
 
- #countdown (max-width: 768px) {
+ #countdown span (max-width: 768px) {
     countdown  {
         padding: 10px 15px;
     }
-    .countdown-unit .value {
+    #countdown span {
         font-size: 2em;
     }
 }
