@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Qash-empire offers digital services including quick loans, forex tutorials, premium e-books, and rewarding compensation games to help you earn from home." />
+  <meta name="keywords" content="earn money online,Qash-empire connections, forex tutorials, e-books, online income, passive income, Qash-empire" />
+  <meta name="author" content="Qash-empire Team, Brianwiz" />
+  <meta name="robots" content="index, follow" />
+  <title>Qash-empire connections - Earn from Home, and anywhere you're. Join the digital life</title> 
+</head>
+<style>
+         * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: rgb(32, 32, 53);
+      color: white;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .header {
+      display: flex;
+      border: solid orange 1px;
+      border-radius: 8px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      background-color: #0f1d1b;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    
+    .btn-signup, .btn-search {
+      background-color: #22c55e;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+      font-size: 0.9rem;
+    }
+    .logo {
+      font-size: 1.25rem;
+      font-weight: bold;
+      padding: 0 1rem;
+      text-align: center;
+      flex: 1;
+      color: #c1ff72;
+    }
+
+    
+      .logo {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+      }
+
+      .btn-signup, .btn-search {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.8rem;
+      }
+
+
+   .container {
+      max-width: 500px;
+      margin: auto;
+      border-radius: 20px;
+      border: solid orange 1px;
+      padding: 30px 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    h1, h2 {
+      font-size: 21px;
+      font-weight: 700;
+      color: rgb(182, 182, 63);
+    }
+    .subtitle {
+      font-size: 16px;
+      margin: 15px 0;
+    }
+.box {
+  background-color:rgb(34, 31, 31);
+  border-radius: 8px;
+  border: solid 1px;
+  padding: 10px;
+}
+
+    ul {
+      text-align: left;
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+
+    button:hover {
+      background-color: rgb(187, 126, 13);
+    }
+    button {
+      background: #1a47e8;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .box1 {
+      border: solid rgb(74, 240, 74) 1px;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      color: #6b7280;
+      font-size: 0.75rem;
+    }
+</style>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="https://super-qash.com/reg/Sherry25"><button>REGISTER NOW</button></a>
+      <div class="logo">Qash-empire</div>
+       <a href="https://api.whatsapp.com/send?phone=256708147856&text=Hey+coach+I'm+interested+to+join+Qashempire+business+please+ADD+ME"><button>WHATSAPP US</button></a>
+  
+                
+
+    </div>
+  </header><br>
+
+  <div class="container">
+    <h2>Unlock Your Digital Advantage, Qash-empire connections is your one - step solution to becoming an online millionare!</h2>
+    <p class="subtitle">Qash-empire connections pays clients worldwide.<strong> Don't estitate to miss this!!</strong></p>
+    </div><br>
+
+    <section class="box1"><br>
+      <p>Are you Ready to be part of the greatest online money making plartform?</p>
+      <br><p>Qash-empire connections is working worldwide!</p>
+      <br>
+     <a href="https://super-qash.com/reg/Sherry25"><button>BOOK YOUR SPOT NOW!!</button></a>
+      <a href="https://www.tiktok.com/@favoritecoach3?_t=ZM-8x4SAahPNFW&_r=1"><button>FOLLOW US ON OUR NEW TIKTOK ACCOUNT</button></a>
+      <p style="font-size: smaller;">The earlier the best, hit my dm. Let me guide you!</p>
+      <br>
+    </section><br>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Created with love ❤. All Rights.
+
+ 
+</body>
+</html>
+
+        </div>
+     </div>
+    </div>
+</div>
+</body>
+</html>
+     </div>
+    </div>
+</div>
+</body>
+</html>
+
+        </div>
+     </div>
+    </div>
+</div>
+</body>
+</html>
