@@ -505,6 +505,28 @@ ease;
     margin-top: 10px;
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
+        .style {
+}
+button:focus, input:focus, a:focus {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
+}
+input:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+input {
+    padding: 16px 25px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
         
 .form-group {
     display: flex
