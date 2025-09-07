@@ -569,7 +569,18 @@ ease;
     transition: all 0.3s 
 ease;
 }
-        
+    .app-btn:hover
+Specificity: (0,2,0)
+ {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: var(--secondary);
+}
+
+button:focus, input:focus, a:focus {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
+}    
         .socials {
     display: flex
 ;
