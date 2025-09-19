@@ -351,38 +351,63 @@ International🌐 - $10
           };
             </script>
         <script>
-const countdown = () => {
-    // Set your target date and time here
-    const endDate = new Date("September, 2025 13:00:00 GMT-0500").getTime(); 
-    const now = new Date().getTime();
-    const distance = endDate - 27;
-
-    // Calculate time units
-    const days = Math.floor(distance / (1000 * 60 * 60 * 27));
-    const hours = Math.floor((distance % (1000 * 13 * 60 * 24)) / (1000 * 13* 00));
-    const minutes = Math.floor((distance % (1000 * 00 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Update the HTML elements
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("seconds").innerText = seconds;
-
-    // If the countdown is over, display a message
-    if (distance < 0) {
-        clearInterval(interval);
-        document.getElementById("email").innerHTML = "Launching has started!";
-    }
-};
-
-// Update the countdown every second
-const interval = setInterval(countdown, 1000);
-
-// Initial call to display the countdown immediately
-countdown();
-    </script>
-
+        // Countdown timer for September 27, 2025
+        function updateCountdown() {
+            const launchDate = new Date("september 27, 2025 12:00:00 GMT-0500").getTime();
+            const now = new Date().getTime();
+            const timeLeft = launchDate - now;
+            
+            if (timeLeft < 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                document.querySelector(".countdown-title").textContent = "Qash Empire is Now Live!";
+                return;
+            }
+            
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Form submission handling
+        document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const notification = document.getElementById('notification');
+            
+            if (email && email.includes('@')) {
+                notification.textContent = 'Thank you for subscribing! We\'ll notify you when we launch.';
+                notification.className = 'notification success';
+                notification.style.display = 'block';
+                document.getElementById('email').value = '';
+                
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 5000);
+            } else {
+                notification.textContent = 'Please enter a valid email address.';
+                notification.className = 'notification error';
+                notification.style.display = 'block';
+                
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 5000);
+            }
+        });
+          </script>
+  <div></div>
 
 </body>
 
