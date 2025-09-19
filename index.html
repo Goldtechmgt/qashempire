@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> JOIN Qash Empire - REGISTER|LOGIN</title>
+  <title> To JOIN Qash Empire - REGISTER|LOGIN</title>
 
   <!-- SEO Meta Tags -->
   <meta name="description" content="QASH EMPIRE is a legitimate online network marketing company registered under. It offers a range of profitable online opportunities to users! Earn Online in Togo, Cameroon, Burkina faso and Benin" />
@@ -218,6 +218,46 @@
       color: #00ffae;
 
     }
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#countdown {
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time-unit {
+    text-align: center;
+}
+
+.time-unit span {
+    font-size: 3em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.time-unit .label {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
   </style>
 </head>
 <body>
@@ -226,6 +266,27 @@
   <h1>QASH EMPIRE</h1>
 </header>
 
+    <h2>Event Countdown</h2>
+    <div id="countdown">
+        <div class="time-unit">
+            <span id="days"></span>
+            <div class="label">Days</div>
+        </div>
+        <div class="time-unit">
+            <span id="hours"></span>
+            <div class="label">Hours</div>
+        </div>
+        <div class="time-unit">
+            <span id="minutes"></span>
+            <div class="label">Minutes</div>
+        </div>
+        <div class="time-unit">
+            <span id="seconds"></span>
+            <div class="label">Seconds</div>
+        </div>
+    </div>
+
+ 
 <div class="dashboard">
   <section>
     <h2>Welcome Today</h2><br>
@@ -281,6 +342,30 @@
 <footer>
   &copy; 2025 Qash-empire. All rights reserved.
 </footer>
+     <script src="script.js">
+ 
+  const countdownDate = new Date("September 27, 2025 13:34:00").getTime();
+
+const x = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+}, 1000);
+    </script>   
 
 </body>
     </html>
