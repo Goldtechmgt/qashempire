@@ -266,25 +266,45 @@ h1 {
   <h1>QASH EMPIRE</h1>
 </header>
 
-    <h2>Event Countdown</h2>
+    <h2>Launching on!!</h2>
     <div id="countdown">
-        <div class="time-unit">
-            <span id="days"></span>
-            <div class="label">Days</div>
-        </div>
-        <div class="time-unit">
-            <span id="hours"></span>
-            <div class="label">Hours</div>
-        </div>
-        <div class="time-unit">
-            <span id="minutes"></span>
-            <div class="label">Minutes</div>
-        </div>
-        <div class="time-unit">
-            <span id="seconds"></span>
-            <div class="label">Seconds</div>
-        </div>
+        <span id="days"></span>d
+        <span id="hours"></span>h
+        <span id="minutes"></span>m
+        <span id="seconds"></span>s
     </div>
+
+    <script src="script.js">// script.js
+const countdown = () => {
+    // Set your target date and time here
+    const endDate = new Date("September, 2025 13:00:00 GMT-0500").getTime(); 
+    const now = new Date().getTime();
+    const distance = endDate - now;
+
+    // Calculate time units
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Update the HTML elements
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    // If the countdown is over, display a message
+    if (distance < 0) {
+        clearInterval(interval);
+        document.getElementById("email").innerHTML = "Launching has started!";
+    }
+};
+
+// Update the countdown every second
+const interval = setInterval(countdown, 1000);
+
+// Initial call to display the countdown immediately
+countdown();</script>
 
  
 <div class="dashboard">
@@ -342,30 +362,6 @@ h1 {
 <footer>
   &copy; 2025 Qash-empire. All rights reserved.
 </footer>
-     <script src="script.js">
- 
-  const countdownDate = new Date("September 27, 2025 13:34:00").getTime();
-
-const x = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
-
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
-    }
-}, 1000);
-    </script>   
 
 </body>
     </html>
