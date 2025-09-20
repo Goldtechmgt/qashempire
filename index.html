@@ -113,12 +113,60 @@ header h1 {
 
     }
 
-    .about, .faq, .contact {
+    .about, .faq,  {
 
       margin-top: 3rem;
 
       text-align: center;
 
+    }
+    /* Contact section styling */
+.contact {
+  background-color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0d47a1;
+}
+
+.highlight {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.email-link {
+  color: #0d47a1;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+/* Email button */
+.email-btn {
+  background-color: #0d47a1;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.email-btn:hover {
+  background-color: #08306b;
     }
 
     .section-title {
@@ -543,12 +591,14 @@ h1 {
       <a href="https://qash-empire.com/reg/Wiz25"><button class="btn btn-dark">Get Started</button></a>
     </div>
   </section>
-
-  <section class="contact">
-    <h2 class="section-title">Have Questions?</h2>
-    <p>Contact us anytime at:</p>
-    <p class="highlight">qashempire@gmail.com<button>EMAIL US</button></p>
-  </section>
+<section class="contact">
+  <h2 class="section-title">Have Questions?</h2>
+  <p>Contact us anytime at:</p>
+  <p class="highlight">
+    <a href="mailto:qashempire@gmail.com" class="email-link">qashempire@gmail.com</a>
+    <button class="email-btn" onclick="location.href='mailto:qashempire@gmail.com'">Email Us</button>
+  </p>
+</section>
     <div class="hashtags">
   <span class="hashtag">#qash-empire</span>
   <span class="hashtag">#qashempire</span>
