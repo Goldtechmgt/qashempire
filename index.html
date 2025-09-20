@@ -236,147 +236,115 @@ h1 {
     margin-bottom: 30px;
 }
       
-        .countdown-item {
-    background: white;
-    border-radius
-Defines the radii of the outer border edge.
-
-Widely available across major browsers (Baseline since January 2018)
-Learn more
-
-Don't show
-: 15px;
-    padding: 20px 15px;
-    min-width: 110px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--secondary);
-}
-        
-}
-           .countdown-number
-Specificity: (0,1,0)
- {
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 5px;
-    color: var(--secondary);
-    font-family: 'Montserrat', sans-serif;
-}
-.countdown-number {
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 5px;
-    color: var(--secondary);
-    font-family: 'Montserrat', sans-serif;
-}
-    
-    font-weight: 800;
-    margin-bottom: 5px;
-    color: var(--secondary);
-    font-family: 'Montserrat', sans-serif;
-}
-    .launch-date
-Specificity: (0,1,0)
- {
-    font-size: 1.3rem;
-    margin-top: 15px;
-    font-weight: 500;
-    color: var(--accent);
-}
-        .launch-date {
-    font-size: 1.3rem;
-    margin-top: 15px;
-    font-weight: 500;
-    color: var(--accent);
+/* === Countdown Timer Styles === */
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
 }
 
-       
-.countdown-box {
-    background: linear-gradient(to right, #f5f5f5, #e0e0e0);
-    border-radius: 15px;
-    padding: 30px;
-    margin: 0 auto 40px;
-    max-width: 800px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--secondary);
+.countdown-item {
+  background: #f3f3f3;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.countdown-box
-Specificity: (0,1,0)
- {
-    background: linear-gradient(to right, #f5f5f5, #e0e0e0);
-    border-radius: 15px;
-    padding: 30px;
-    margin: 0 auto 40px;
-    max-width: 800px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--secondary);
+
+.countdown-item span {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #16BE45;
+}
+
+.countdown-item label {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 .countdown-title {
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-    color: var(--primary);
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
-}
-            .countdown {
-        gap: 10px;
-    }
-}
-.countdown {
-    display: flex
-;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-            .countdown-item {
-        min-width: 70px;
-        padding: 15px 8px;
-    }
-}
-.countdown-item {
-    background: white;
-    border-radius: 15px;
-    padding: 20px 15px;
-    min-width: 110px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--secondary);
-}
-          
-.countdown-label
-Specificity: (0,1,0)
- {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-    color: var(--primary);
-}
-.countdown-label {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-    color: var(--primary);
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-        .hashtags {
-    display: flex
-;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
+/* === Subscription Form Styles === */
+#subscribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
 }
-       
+
+#subscribe-form input[type="email"] {
+  padding: 12px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
 }
-        .hashtag {
-    background: #e0e0e0;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: #444;
-} 
+
+#subscribe-form input[type="email"]:focus {
+  outline: none;
+  border-color: #16BE45;
+}
+
+#subscribe-form button {
+  background-color: #16BE45;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#subscribe-form button:hover {
+  background-color: #139c38;
+}
+
+/* === Notification Styles === */
+.notification {
+  margin-top: 15px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  display: none;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+}
+
+.notification.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.notification.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* === Responsive Design === */
+@media (max-width: 500px) {
+  .countdown-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
   </style>
 </head>
