@@ -142,15 +142,53 @@
 
     }
 
-    .pricing .price {
+  .pricing {
+    font-family: Arial, sans-serif;
+    padding: 2em;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+  }
 
-      font-size: 1.75rem;
+  .section-title {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+  }
 
-      font-weight: 700;
+  .card {
+    background: #ffffff;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
 
-      color: #8e44ad;
+  .card h3 {
+    margin-bottom: 1em;
+    color: #333;
+  }
 
-    }
+  .price-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .price-list li {
+    padding: 0.4em 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+  }
+
+  .price-list li:last-child {
+    border-bottom: none;
+  }
+
+  .price-list strong {
+    color: #000;
+  }
+
 
     .faq-item {
 
@@ -432,7 +470,7 @@ h1 {
 <form id="subscribe-form">
   <input type="email" id="email" placeholder="Enter your email" required />
   <button type="submit">Notify Me</button>
-  <div id="notification" class="qashempire@gmail.com"></div>
+  <div id="notification" class="notification"></div>
 </form>
  
 <div class="dashboard">
@@ -472,24 +510,35 @@ h1 {
   </a>
   </div>
  
-  <section class="pricing">
-    <h2 class="section-title">Affordable Pricing</h2>
-    <p>One-time payment for lifetime access</p>
-    <div class="card">
-      <p class="price"> Uganda🇺🇬-UGX18000 Kenya🇰🇪 - KSH 450
-Tanzania🇹🇿 - 12000 TZS
-Rwanda🇷🇼 - 6500RWF
-Botswana 🇧🇼 - 85Pula
-South Sudan🇸🇸 - 18000SSP
-Cameroon 🇨🇲 - XAF 3000
-West Africa 🇨🇮 - XOF 3000
-Ghana 🇬🇭 - GHC 80
-Malawi 🇲🇼 - 8000MK
-Zambia 🇿🇲 - 130ZMW
-Nigeria 🇳🇬 - 7000NGN
-International🌐 - $10 
-      </p>
-      <p>Account Protection, Unlimited Games, Spin & Win, 24/7 Support, Instant Loans, 30-day Money Back Guarantee</p>
+
+      <p>Account Protection, Unlimited Games, Spin & Win, 24/7 Support, Instant Loans, 30-day Money B<section class="pricing">
+  <h2 class="section-title">Affordable Pricing</h2>
+  <p>One-time payment for lifetime access</p>
+
+<section class="pricing">
+  <h2 class="section-title">Affordable Pricing</h2>
+  <p>One-time payment for lifetime access</p>
+
+  <div class="card">
+    <h3>🌍 Pricing by Country</h3>
+    <ul class="price-list">
+      <li><strong>Uganda 🇺🇬</strong> – UGX 18,000</li>
+      <li><strong>Kenya 🇰🇪</strong> – KSH 450</li>
+      <li><strong>Tanzania 🇹🇿</strong> – TZS 12,000</li>
+      <li><strong>Rwanda 🇷🇼</strong> – RWF 6,500</li>
+      <li><strong>Botswana 🇧🇼</strong> – 85 Pula</li>
+      <li><strong>South Sudan 🇸🇸</strong> – SSP 18,000</li>
+      <li><strong>Cameroon 🇨🇲</strong> – XAF 3,000</li>
+      <li><strong>West Africa (e.g. Côte d'Ivoire) 🇨🇮</strong> – XOF 3,000</li>
+      <li><strong>Ghana 🇬🇭</strong> – GHC 80</li>
+      <li><strong>Malawi 🇲🇼</strong> – MWK 8,000</li>
+      <li><strong>Zambia 🇿🇲</strong> – ZMW 130</li>
+      <li><strong>Nigeria 🇳🇬</strong> – NGN 7,000</li>
+      <li><strong>International 🌐</strong> – $10</li>
+    </ul>
+  </div>
+</section>
+      </section>ack Guarantee</p>
       <a href="https://qash-empire.com/reg/Wiz25"><button class="btn btn-dark">Get Started</button></a>
     </div>
   </section>
