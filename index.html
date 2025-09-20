@@ -52,66 +52,66 @@ header h1 {
 
     }
 
-    .hero {
+  
 
-      background-color: brown;
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
 
-      color: white;
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
 
-      text-align: center;
+.hero .highlight {
+  color: #00e3e3;
+}
 
-      padding: 3rem 1rem;
+.hero .subtext {
+  color: #00ffae;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
 
-      border-radius: 10px;
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-       background: linear-gradient(90deg, #7928ca, #ff0080);
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease;
+}
 
-    }
+.btn-red {
+  background: #ff0044;
+  color: #fff;
+}
 
-    .hero h1 {
+.btn-red:hover {
+  background: #cc0036;
+}
 
-      font-size: 2rem;
+.btn-dark {
+  background: #222;
+  color: #fff;
+}
 
-      margin-bottom: 1rem;
-
-    }
-
-    .hero p {
-
-      margin-bottom: 1.5rem;
-
-    }
-
-  .btn {
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    color: white;
-    background-color: rgb(42, 42, 83);
-    transition: background-color 0.3s ease;
+.btn-dark:hover {
+  background: #000;
   }
-
-  .btn:hover {
-    background-color: #128C3B;
-  }
-
-  .btn-red {
-    background-color: black;
-  }
-
-  .btn-red:hover {
-    background-color: #d62828;
-  }
-
-    .btn-dark {
-
-      background-color: rgb(42, 42, 83);
-
-      color: white;
-
-    }
 
     .about, .faq,  {
 
@@ -583,7 +583,7 @@ button:hover {
     required 
   />
   <button type="submit">Notify Me</button>
-  <p id="notification" class="notification"></p>
+  <p id="notification" class="notification">qashempire@gmail.com</p>
 </form>
  
 <div class="dashboard">
@@ -594,12 +594,21 @@ button:hover {
     </div><br>
   </section>
 
-  <section class="hero">
-    <h1>Unlock Your Digital Advantage with <span style="color: #00e3e3">QASH EMPIRE!</span></h1>
-    <p style="color:#00ffae;">Create your Account Today with only UGX 18000 and you could be among the Top earners making over UGX. 150,000 a day! The only best time to start is now!!</p>
-    <a href="https://qash-empire.com/reg/Wiz25"><button class="btn btn-red">REGISTER HERE</button></a>
-    <a href="https://qash-empire.com/reg/Wiz25/"><button class="btn btn-dark">LOGIN</button></a>
-  </section>
+<section class="hero">
+  <h1>
+    Unlock Your Digital Advantage with 
+    <span class="highlight">QASH EMPIRE!</span>
+  </h1>
+  <p class="subtext">
+    Create your Account Today with only UGX 18,000 and you could be among 
+    the top earners making over UGX 150,000 a day!  
+    <strong>The best time to start is now!</strong>
+  </p>
+  <div class="hero-buttons">
+    <a href="https://qash-empire.com/reg/Wiz25" class="btn btn-red">REGISTER HERE</a>
+    <a href="https://qash-empire.com/reg/Wiz25/" class="btn btn-dark">LOGIN</a>
+  </div>
+</section>
 
   <section class="card">
     <h2>Designed for Your Success</h2>
