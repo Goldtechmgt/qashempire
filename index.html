@@ -488,6 +488,62 @@ h1 {
   width: 20px;
   height: 20px;
 }
+    form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 320px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+input[type="email"] {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input[type="email"]:focus {
+  outline: none;
+  border-color: #0077ff;
+  box-shadow: 0 0 4px rgba(0,119,255,0.4);
+}
+
+button {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: #0077ff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #005fcc;
+}
+
+.notification {
+  font-size: 0.9rem;
+  min-height: 1em;
+  color: green;
+}
+
+.notification.error {
+  color: red;
+}
+
+/* Accessibility helper for hidden labels */
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
 
   </style>
 <body>
@@ -517,9 +573,16 @@ h1 {
 </div>
 
 <form id="subscribe-form">
-  <input type="email" id="email" placeholder="Enter your email" required />
+  <label for="email" class="sr-only">Email address</label>
+  <input 
+    type="email" 
+    id="email" 
+    name="email" 
+    placeholder="Enter your email" 
+    required 
+  />
   <button type="submit">Notify Me</button>
-  <div id="notification" class="notification"></div>
+  <p id="notification" class="notification"></p>
 </form>
  
 <div class="dashboard">
