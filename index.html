@@ -358,19 +358,19 @@ h1 {
 
 <div class="countdown-container">
   <div class="countdown-item">
-    <span id="days">07</span>
+    <span id="days">00</span>
     <label>Days</label>
   </div>
   <div class="countdown-item">
-    <span id="hours">02</span>
+    <span id="hours">00</span>
     <label>Hours</label>
   </div>
   <div class="countdown-item">
-    <span id="minutes">48</span>
+    <span id="minutes">00</span>
     <label>Minutes</label>
   </div>
   <div class="countdown-item">
-    <span id="seconds">60</span>
+    <span id="seconds">00</span>
     <label>Seconds</label>
   </div>
 </div>
@@ -493,7 +493,78 @@ International🌐 - $10
     }
   });
 </script>
+  
+  <script>
+  // === Countdown Timer ===
+  const countdownElements = {
+    days: document.getElementById("days"),
+    hours: document.getElementById("hours"),
+    minutes: document.getElementById("minutes"),
+    seconds: document.getElementById("seconds"),
+    title: document.querySelector(".countdown-title")
+  };
 
+  function updateCountdown() {
+    const launchDate = new Date("September 27, 2025 12:00:00 GMT-0500").getTime();
+    const now = Date.now();
+    const timeLeft = launchDate - now;
+
+    if (timeLeft <= 0) {
+      Object.values(countdownElements).forEach((el, index) => {
+        if (index < 4) el.textContent = "00";
+      });
+      countdownElements.title.textContent = "Qash Empire is Now Live!";
+      clearInterval(timer);
+      return;
+    }
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+    const seconds = Math.floor((timeLeft / 1000) % 60);
+
+    countdownElements.days.textContent = String(days).padStart(2, '0');
+    countdownElements.hours.textContent = String(hours).padStart(2, '0');
+    countdownElements.minutes.textContent = String(minutes).padStart(2, '0');
+    countdownElements.seconds.textContent = String(seconds).padStart(2, '0');
+  }
+
+  const timer = setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  // === Form Submission Handling ===
+  const form = document.getElementById("subscribe-form");
+  const emailInput = document.getElementById("email");
+  const notification = document.getElementById("notification");
+
+  form?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+
+    if (validateEmail(email)) {
+      showNotification("Thank you for subscribing! We'll notify you when we launch.", "success");
+      emailInput.value = "";
+    } else {
+      showNotification("Please enter a valid email address.", "error");
+    }
+  });
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function showNotification(message, type) {
+    if (!notification) return;
+
+    notification.textContent = message;
+    notification.className = `notification ${type}`;
+    notification.style.display = "block";
+
+    setTimeout(() => {
+      notification.style.display = "none";
+    }, 5000);
+  }
+  </script>
 
   <div></div>
 
