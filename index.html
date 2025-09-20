@@ -482,13 +482,29 @@ International🌐 - $10
   &copy; 2025 Qash-empire. All rights reserved.
 </footer>
  
-       <script>
-          var wa_btnSetting = {&quot;btnColor&quot;:&quot;#16BE45&quot;,&quot;ctaText&quot;:&quot;WhatsApp Us&quot;,&quot;cornerRadius&quot;:40,&quot;marginBottom&quot;:20,&quot;marginLeft&quot;:20,&quot;marginRight&quot;:20,&quot;btnPosition&quot;:&quot;right&quot;,&quot;whatsAppNumber&quot;:&quot;256708147856&quot;,&quot;welcomeMessage&quot;:&quot;Hello am interested in SuperQash, please link me up&quot;,&quot;zIndex&quot;:999999,&quot;btnColorScheme&quot;:&quot;light&quot;};
-          window.onload = () =&gt; {
-            _waEmbed(wa_btnSetting);
-          };
-            </script>
-        <script>
+    <script>
+  const waButtonSettings = {
+    btnColor: "#16BE45",
+    ctaText: "WhatsApp Us",
+    cornerRadius: 40,
+    marginBottom: 20,
+    marginLeft: 20,
+    marginRight: 20,
+    btnPosition: "right",
+    whatsAppNumber: "256708147856",
+    welcomeMessage: "Hello, I'm interested in Qash Empire. Please link me up.",
+    zIndex: 999999,
+    btnColorScheme: "light"
+  };
+
+  window.addEventListener("load", () => {
+    if (typeof _waEmbed === "function") {
+      _waEmbed(waButtonSettings);
+    } else {
+      console.error("WhatsApp embed function '_waEmbed' is not defined.");
+    }
+  });
+</script>
         // Countdown timer for September 27, 2025
         function updateCountdown() {
             const launchDate = new Date("september 27, 2025 12:00:00 GMT-0500").getTime();
