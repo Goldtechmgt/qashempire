@@ -507,62 +507,77 @@ International🌐 - $10
   });
 </script>
   <script>
-        // Countdown timer for September 27, 2025
-        function updateCountdown() {
-            const launchDate = new Date("september 27, 2025 12:00:00 GMT-0500").getTime();
-            const now = new Date().getTime();
-            const timeLeft = launchDate - now;
-            
-            if (timeLeft < 0) {
-                document.getElementById("days").innerText = "00";
-                document.getElementById("hours").innerText = "00";
-                document.getElementById("minutes").innerText = "00";
-                document.getElementById("seconds").innerText = "00";
-                document.querySelector(".countdown-title").textContent = "Qash Empire is Now Live!";
-                return;
-            }
-            
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-            
-            document.getElementById("days").innerText = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-        }
-        
-        // Update countdown every second
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-        
-        // Form submission handling
-        document.getElementById('subscribe-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const notification = document.getElementById('notification');
-            
-            if (email && email.includes('@')) {
-                notification.textContent = 'Thank you for subscribing! We\'ll notify you when we launch.';
-                notification.className = 'notification success';
-                notification.style.display = 'block';
-                document.getElementById('email').value = '';
-                
-                setTimeout(() => {
-                    notification.style.display = 'none';
-                }, 5000);
-            } else {
-                notification.textContent = 'Please enter a valid email address.';
-                notification.className = 'notification error';
-                notification.style.display = 'block';
-                
-                setTimeout(() => {
-                    notification.style.display = 'none';
-                }, 5000);
-            }
-        });
-          </script>
+  // === Countdown Timer ===
+  const countdownElements = {
+    days: document.getElementById("days"),
+    hours: document.getElementById("hours"),
+    minutes: document.getElementById("minutes"),
+    seconds: document.getElementById("seconds"),
+    title: document.querySelector(".countdown-title")
+  };
+
+  function updateCountdown() {
+    const launchDate = new Date("September 27, 2025 12:00:00 GMT-0500").getTime();
+    const now = Date.now();
+    const timeLeft = launchDate - now;
+
+    if (timeLeft <= 0) {
+      Object.values(countdownElements).forEach((el, index) => {
+        if (index < 4) el.textContent = "00";
+      });
+      countdownElements.title.textContent = "Qash Empire is Now Live!";
+      clearInterval(timer);
+      return;
+    }
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+    const seconds = Math.floor((timeLeft / 1000) % 60);
+
+    countdownElements.days.textContent = String(days).padStart(2, '0');
+    countdownElements.hours.textContent = String(hours).padStart(2, '0');
+    countdownElements.minutes.textContent = String(minutes).padStart(2, '0');
+    countdownElements.seconds.textContent = String(seconds).padStart(2, '0');
+  }
+
+  const timer = setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  // === Form Submission Handling ===
+  const form = document.getElementById("subscribe-form");
+  const emailInput = document.getElementById("email");
+  const notification = document.getElementById("notification");
+
+  form?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+
+    if (validateEmail(email)) {
+      showNotification("Thank you for subscribing! We'll notify you when we launch.", "success");
+      emailInput.value = "";
+    } else {
+      showNotification("Please enter a valid email address.", "error");
+    }
+  });
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function showNotification(message, type) {
+    if (!notification) return;
+
+    notification.textContent = message;
+    notification.className = `notification ${type}`;
+    notification.style.display = "block";
+
+    setTimeout(() => {
+      notification.style.display = "none";
+    }, 5000);
+  }
+  </script>
+
   <div></div>
 
 </body>
