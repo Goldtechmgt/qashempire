@@ -354,14 +354,32 @@ h1 {
   <h1>QASH EMPIRE</h1>
 </header>
 
-    <h2>Launching on!!</h2>
-    <div id="countdown">
-        <span id="days"></span>d
-        <span id="hours"></span>h
-        <span id="minutes"></span>m
-        <span id="seconds"></span>s
-    </div>
+   <h2 class="countdown-title">Launching In:</h2>
 
+<div class="countdown-container">
+  <div class="countdown-item">
+    <span id="days">00</span>
+    <label>Days</label>
+  </div>
+  <div class="countdown-item">
+    <span id="hours">00</span>
+    <label>Hours</label>
+  </div>
+  <div class="countdown-item">
+    <span id="minutes">00</span>
+    <label>Minutes</label>
+  </div>
+  <div class="countdown-item">
+    <span id="seconds">00</span>
+    <label>Seconds</label>
+  </div>
+</div>
+
+<form id="subscribe-form">
+  <input type="email" id="email" placeholder="Enter your email" required />
+  <button type="submit">Notify Me</button>
+  <div id="notification" class="notification"></div>
+</form>
  
 <div class="dashboard">
   <section>
@@ -450,6 +468,7 @@ International🌐 - $10
 <footer>
   &copy; 2025 Qash-empire. All rights reserved.
 </footer>
+
  
     <script>
   const waButtonSettings = {
