@@ -586,6 +586,34 @@ button:hover {
       background-color: #1ebe5d; /* darker green on hover */
       transform: scale(1.05);    /* slight zoom */
     }
+    /* Qash Empire section styles */
+  #qash-empire-about { background: #f8fafc; color: #0f172a; padding: 48px 16px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+  .qe-container { max-width: 1100px; margin: 0 auto; }
+  .qe-header { text-align: center; margin-bottom: 28px; }
+  .qe-header h1 { font-size: 28px; margin: 0 0 8px; letter-spacing: -0.4px; }
+  .qe-sub { color: #475569; font-size: 15px; margin: 0; }
+
+  .qe-grid { display: grid; gap: 18px; grid-template-columns: repeat(12, 1fr); align-items: start; margin-top: 18px; }
+  .qe-card { grid-column: span 4; background: #ffffff; padding: 18px; border-radius: 12px; box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06); }
+  .qe-card h2 { margin-top: 0; font-size: 18px; color: #0f172a; }
+  .qe-card p, .qe-card li { color: #334155; line-height: 1.55; font-size: 14px; margin: 8px 0; }
+  .qe-card ul { padding-left: 18px; margin: 8px 0; }
+
+  .qe-why { grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between; }
+  .qe-cta-wrap { margin-top: 12px; }
+  .qe-cta { display: inline-block; text-decoration: none; padding: 10px 16px; border-radius: 10px; background: #0ea5a3; color: #fff; font-weight: 600; font-size: 14px; }
+  .qe-footer { text-align: center; margin-top: 20px; color: #475569; font-size: 14px; }
+
+  /* Responsive */
+  @media (max-width: 920px) {
+    .qe-card { grid-column: span 6; }
+    .qe-why { grid-column: span 6; }
+  }
+  @media (max-width: 640px) {
+    .qe-grid { grid-template-columns: repeat(6, 1fr); }
+    .qe-card { grid-column: span 6; }
+    .qe-header h1 { font-size: 22px; }
+  }
   </style>
 <body>
 
@@ -727,7 +755,56 @@ button:hover {
   <span class="hashtag">#QashEmpireuganda</span>
   <span class="hashtag">#QashEmpireghana</span>
     </div>
-  
+
+  <section id="qash-empire-about" aria-labelledby="qe-about-heading">
+  <div class="qe-container">
+    <header class="qe-header">
+      <h1 id="qe-about-heading">About Qash Empire</h1>
+      <p class="qe-sub">Empowering modern entrepreneurs with knowledge, opportunity and a supportive global network.</p>
+  </header>
+    <div class="qe-grid">
+      <article class="qe-card">
+        <h2>Who We Are</h2>
+        <p>
+          <strong>Qash Empire</strong> is a digital wealth-building platform dedicated to helping individuals unlock sustainable income opportunities across the online economy.
+          We combine networking, financial literacy, and digital tools to create a reliable pathway toward financial growth and independence.
+        </p>
+      </article>
+
+      <article class="qe-card">
+        <h2>Our Mission</h2>
+        <p>
+          To empower people worldwide to achieve financial freedom by providing practical guidance, verified opportunities, and a community focused on growth, integrity, and collaboration.
+        </p>
+      </article>
+
+      <article class="qe-card">
+        <h2>Our Vision</h2>
+        <p>
+          To become a leading global hub for digital entrepreneurship — a place where anyone with ambition can build, scale, and sustain wealth in the digital era.
+        </p>
+      </article>
+
+      <aside class="qe-card qe-why">
+        <h2>Why Choose Qash Empire?</h2>
+        <ul>
+          <li>Access to global opportunities and diverse income streams</li>
+          <li>Step-by-step guidance, resources, and mentorship</li>
+          <li>A supportive, growth-focused community</li>
+          <li>Transparent processes and a commitment to long-term value</li>
+        </ul>
+
+        <p class="qe-cta-wrap">
+          <a class="qe-cta" href="https://qash-empire.online/" title="Visit Qash Empire">Join Qash Empire</a>
+        </p>
+      </aside>
+    </div>
+
+    <footer class="qe-footer">
+      <p><em>Qash Empire is more than a platform — it’s a movement toward digital success and financial empowerment.</em></p>
+    </footer>
+  </div>
+  </section>
 </div>
 
 <footer>
