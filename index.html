@@ -610,6 +610,28 @@ button:hover {
     .qe-card { grid-column: span 6; }
     .qe-header h1 { font-size: 22px; }
   }
+    wa-btn {
+  display: inline-block;
+  background: #25D366; /* WhatsApp green */
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.wa-btn:hover {
+  background: #1ebe5d; /* darker green on hover */
+}
+
+.wa-icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+    
   </style>
 <body>
 
@@ -795,6 +817,12 @@ button:hover {
         </p>
       </aside>
     </div>
+    <div class="wa-box">
+  <a href="https://chat.whatsapp.com/FsJtiIWQ1ok7gMOp88CCuL?mode=ems_copy_c" 
+     target="_blank" rel="noopener noreferrer" class="wa-btn">
+    <span class="wa-icon">💬</span> Join Our WhatsApp Group
+  </a>
+    </div>
 
     <footer class="qe-footer">
       <p><em>Qash Empire is more than a platform — it’s a movement toward digital success and financial empowerment.</em></p>
@@ -806,6 +834,7 @@ button:hover {
 <footer id="qe-copyright">
   <p>&copy; <span id="year"></span> Qash Empire. All Rights Reserved.</p>
 </footer>
+  
     <script>
   const waButtonSettings = {
     btnColor: "#16BE45",
