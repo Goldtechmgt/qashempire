@@ -829,7 +829,7 @@ input[type="email"]:focus {
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon" />
   WhatsApp Us
 </a>  
-  <script>
+<script>
   // === Countdown Timer ===
   const countdownElements = {
     days: document.getElementById("days"),
@@ -839,16 +839,23 @@ input[type="email"]:focus {
     title: document.querySelector(".countdown-title")
   };
 
+  // Set the target time: Today at 13:45 GMT
+  const now = new Date();
+  const launchDate = Date.UTC(
+    now.getUTCFullYear(),
+    now.getUTCMonth(),
+    now.getUTCDate(),
+    13, 45, 0
+  );
+
   function updateCountdown() {
-    const launchDate = new Date("September 27, 2025 12:00:00 GMT-0500").getTime();
-    const now = Date.now();
-    const timeLeft = launchDate - now;
+    const timeLeft = launchDate - Date.now();
 
     if (timeLeft <= 0) {
       Object.values(countdownElements).forEach((el, index) => {
         if (index < 4) el.textContent = "00";
       });
-      countdownElements.title.textContent = "Qash Empire is Now Live!";
+      countdownElements.title.textContent = "🚀 Qash Empire is Now Live!";
       clearInterval(timer);
       return;
     }
@@ -899,7 +906,7 @@ input[type="email"]:focus {
       notification.style.display = "none";
     }, 5000);
   }
-  </script>
+</script>
   <script>
   document.getElementById("year").textContent = new Date().getFullYear();
   </script>
