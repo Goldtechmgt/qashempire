@@ -840,8 +840,9 @@ input[type="email"]:focus {
   };
 
   function updateCountdown() {
-    const launchDate = newDate("2025-09-27T01:00:00Z").getTime();
+    const launchDate = newDate("2025-09-27T13:00:00Z").getTime();
     const timeLeft = launchDate - now;
+    
 
     if (timeLeft <= 0) {
       Object.values(countdownElements).forEach((el, index) => {
