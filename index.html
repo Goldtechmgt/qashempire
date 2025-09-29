@@ -529,7 +529,23 @@
      .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
     @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:640px){.grid{grid-template-columns:1fr}}
-    
+
+            .card{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:18px;border-radius:14px;backdrop-filter:blur(6px);box-shadow:0 6px 20px rgba(2,6,23,0.6);transition:transform .18s ease, box-shadow .18s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(3,8,30,0.6)}
+
+    .card-head{display:flex;align-items:center;gap:14px}
+    .icon-wrap{width:68px;height:68px;border-radius:12px;display:grid;place-items:center}
+    .title{font-weight:700;margin:0}
+    .muted{color:var(--muted);font-size:13px;margin-top:6px}
+
+    .desc{margin:12px 0 0;line-height:1.45;color:#d8e6fb}
+
+    .badge{display:inline-block;padding:6px 9px;border-radius:999px;font-weight:600;font-size:12px}
+
+    .accent-pink{background:linear-gradient(90deg,var(--accent1),#ff9ec0);color:#081128}
+    .accent-orange{background:linear-gradient(90deg,var(--accent2),#ffd29b);color:#081128}
+    .accent-green{background:linear-gradient(90deg,var(--accent3),#8fffcf);color:#083126}
+
   </style>
 <body>
 
@@ -572,6 +588,154 @@
                 <path d="M9.8 15.2V8.8l5.2 3.2-5.2 3.2z" fill="#081128"/>
               </svg>
             </div>
+            <div>
+              <div class="title">Watch Paid YouTube Videos</div>
+              <div class="muted">Earn by watching sponsored videos & ads</div>
+            </div>
+          </div>
+          <p class="desc">Get paid to watch selected YouTube videos. Typically each video pays a small amount — watch fully, follow any instructions (like liking or commenting) and mark it complete to receive the reward.</p>
+          <ul class="detail-list">
+            <li>Tips: Watch at normal speed, complete any required actions exactly.</li>
+            <li>Payouts: Small per-video amounts; volume matters.</li>
+          </ul>
+          <div class="actions"><button class="btn btn-ghost">How it works</button><button class="btn btn-primary">Start Watching</button></div>
+        </article>
+
+        <!-- Paid TikTok Videos -->
+        <article class="card" id="tt">
+          <div class="card-head">
+            <div class="icon-wrap" style="background:linear-gradient(135deg,var(--accent2),#ffdcb3)">
+              <!-- SVG TikTok-like -->
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v12.2a3.6 3.6 0 0 1-3.6-3.6A3.6 3.6 0 0 1 12 7V2h3.2c1.2 0 2 .9 2 2v.6a5.2 5.2 0 0 1-5.2 5.2V8.8" fill="#081128" opacity=".95"/>
+              </svg>
+            </div>
+            <div>
+              <div class="title">Watch Paid TikTok Videos</div>
+              <div class="muted">Short vertical videos that pay per view</div>
+            </div>
+          </div>
+          <p class="desc">Short-form content often pays quicker because videos are short. You may need to watch to a minimum watch time, engage, or follow creator pages to earn.</p>
+          <ul class="detail-list">
+            <li>Tips: Let videos play fully and avoid skipping.</li>
+            <li>Good for: mobile-first users, short-sessions earning.</li>
+          </ul>
+          <div class="actions"><button class="btn btn-ghost">How it works</button><button class="btn btn-primary">Start Watching</button></div>
+        </article>
+  </main>
+        <!-- Answering Questions -->
+        <article class="card" id="qa">
+          <div class="card-head">
+            <div class="icon-wrap" style="background:linear-gradient(135deg,var(--accent3),#bfffe5)">
+              <!-- SVG question -->
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" fill="#081128" opacity=".07"/>
+                <path d="M11 17h2v2h-2zM11.2 7.5c.4-.8 1.4-1.5 2.8-1.5 1.9 0 3 1.3 3 3v1c0 1.9-2 2.4-2.8 2.8-.8.4-1.2.9-1.2 1.9v.8h-2v-.5c0-1.7.8-2.5 1.6-2.9.8-.4 1.9-.7 1.9-1.8v-1c0-1-.6-1.2-1-1.2-.9 0-1.3.4-1.3.4" fill="#081128"/>
+              </svg>
+            </div>
+            <div>
+              <div class="title">Answer Questions</div>
+              <div class="muted">Provide quick answers, quizzes, or surveys</div>
+            </div>
+          </div>
+          <p class="desc">Complete short quizzes, surveys or answer one-off questions. Payments vary by complexity — higher-paying tasks require more accurate or longer answers.</p>
+          <ul class="detail-list">
+            <li>Tips: Read questions carefully; accuracy often determines payout.</li>
+            <li>Payouts: Higher for specialized or long-form responses.</li>
+          </ul>
+          <div class="actions"><button class="btn btn-ghost">How it works</button><button class="btn btn-primary">Answer Now</button></div>
+        </article>
+
+        <!-- Free Spinning -->
+        <article class="card" id="spin">
+          <div class="card-head">
+            <div class="icon-wrap" style="background:linear-gradient(135deg,#d9b3ff,var(--accent1))">
+              <!-- SVG wheel -->
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9" fill="#081128" opacity=".06"/>
+                <path d="M12 5v7l3 1" stroke="#081128" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="title">Free Spinning (Daily)</div>
+              <div class="muted">Spin wheel to win coins, credits, or prizes</div>
+            </div>
+          </div>
+          <p class="desc">A daily or hourly spin gives a chance to win bonus credits, cash, or multiplier boosts. Best used as a way to compound small daily earnings into larger rewards.</p>
+          <ul class="detail-list">
+            <li>Tips: Use daily to increase chances; watch for bonus days with higher rewards.</li>
+            <li>Good for: boosting earnings and keeping users returning.</li>
+          </ul>
+          <div class="actions"><button class="btn btn-ghost">How it works</button><button class="btn btn-primary">Spin Now</button></div>
+        </article>
+
+        <!-- Ad Clicking -->
+        <article class="card" id="ads">
+          <div class="card-head">
+            <div class="icon-wrap" style="background:linear-gradient(135deg,#89b6ff,#a8d0ff)">
+              <!-- SVG cursor -->
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+                <path d="M3 3l18 9-18 9V3z" fill="#081128" opacity=".06"/>
+                <path d="M7 7h10v4H7z" fill="#081128"/>
+              </svg>
+            </div>
+            <div>
+              <div class="title">Ad Clicking / Engagement</div>
+              <div class="muted">Click ads, view landing pages, or complete micro-tasks</div>
+            </div>
+          </div>
+          <p class="desc">Click-through tasks usually require you to visit an advertiser page and stay for a minimum time. These tasks pay small amounts but scale with volume.</p>
+          <ul class="detail-list">
+            <li>Tips: Follow task rules exactly (min time, specific actions).</li>
+            <li>Security: Never provide personal or sensitive info while doing ad tasks.</li>
+          </ul>
+          <div class="actions"><button class="btn btn-ghost">How it works</button><button class="btn btn-primary">View Tasks</button></div>
+        </article>
+
+        <!-- Forex Trading -->
+        <article class="card" id="forex">
+          <div class="card-head">
+            <div class="icon-wrap" style="background:linear-gradient(135deg,#c7f3ff,#9fe6ff)">
+              <!-- SVG chart -->
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+                <path d="M3 17l4-6 4 4 6-10 4 6" stroke="#081128" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="title">Forex Trading (Advanced)</div>
+              <div class="muted">Trade currency pairs — higher risk, higher reward</div>
+            </div>
+          </div>
+          <p class="desc">Forex is a leveraged market where careful strategy, risk management, and education are essential. Only use funds you can afford to lose and learn with demo accounts first.</p>
+          <ul class="detail-list">
+            <li>Tips: Start with demo trading, use stop-losses, and never trade with borrowed money.</li>
+            <li>Risk: High — require knowledge and caution.</li>
+          </ul>
+          <div class="actions"><button class="btn btn-ghost">Learn Trading</button><button class="btn btn-primary">Open Demo</button></div>
+        </article>
+
+        <!-- Invite Friends -->
+        <article class="card" id="invite">
+          <div class="card-head">
+            <div class="icon-wrap" style="background:linear-gradient(135deg,#ffd6b3,#ffd6b3)">
+              <!-- SVG invite -->
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none">
+                <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 8v-1a4 4 0 0 0-4-4H10a4 4 0 0 0-4 4v1" stroke="#081128" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="title">Invite Friends (Referral)</div>
+              <div class="muted">Earn bonuses for successful referrals</div>
+            </div>
+          </div>
+          <p class="desc">Share your referral link and get rewards when friends sign up and complete qualifying actions. Referral bonuses can be a steady passive income when you have many active users.</p>
+          <ul class="detail-list">
+            <li>Tips: Share in niche groups, explain how to get started to increase conversion.</li>
+            <li>Terms: Check qualifying actions; some invites only count after activity.</li>
+          </ul>
+          <div class="actions"><button class="btn btn-ghost">Referral Terms</button><button class="btn btn-primary">Copy Invite Link</button></div>
+        </article>
+        
   <section class="card">
     <h2>Designed for Your Success</h2>
     <p>✔ Ready to elevate your earnings and expand your opportunities?</p>
