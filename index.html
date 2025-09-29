@@ -21,18 +21,6 @@
      crossorigin="anonymous"></script>
 </head>
   <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --muted:#9aa6bf;
-      --accent1:#ff7aa2; /* pink */
-      --accent2:#ffb86b; /* orange */
-      --accent3:#6ee7b7; /* green */
-      --glass: rgba(255,255,255,0.03);
-      --glass-2: rgba(255,255,255,0.02);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-   
     * {
       margin: 0;
       padding: 0;
@@ -530,7 +518,7 @@
     @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:640px){.grid{grid-template-columns:1fr}}
 
-            .card{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:18px;border-radius:14px;backdrop-filter:blur(6px);box-shadow:0 6px 20px rgba(2,6,23,0.6);transition:transform .18s ease, box-shadow .18s ease}
+            .card02{background:linear-gradient(180deg,var(--glass),var(--glass-2));padding:18px;border-radius:14px;backdrop-filter:blur(6px);box-shadow:0 6px 20px rgba(2,6,23,0.6);transition:transform .18s ease, box-shadow .18s ease}
     .card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(3,8,30,0.6)}
 
     .card-head{display:flex;align-items:center;gap:14px}
@@ -588,7 +576,7 @@
   <main>
       <div class="grid">
         <!-- Paid YouTube Videos -->
-        <article class="card" id="yt">
+        <article class="card02" id="yt">
           <div class="card-head">
             <div class="icon-wrap" style="background:linear-gradient(135deg,var(--accent1),#ffb3c6)">
               <!-- SVG YouTube style -->
@@ -611,7 +599,7 @@
         </article>
 
         <!-- Paid TikTok Videos -->
-        <article class="card" id="tt">
+        <article class="card02" id="tt">
           <div class="card-head">
             <div class="icon-wrap" style="background:linear-gradient(135deg,var(--accent2),#ffdcb3)">
               <!-- SVG TikTok-like -->
@@ -635,7 +623,7 @@
 </div>
   
         <!-- Answering Questions -->
-        <article class="card" id="qa">
+        <article class="card02" id="qa">
           <div class="card-head">
             <div class="icon-wrap" style="background:linear-gradient(135deg,var(--accent3),#bfffe5)">
               <!-- SVG question -->
@@ -658,7 +646,7 @@
         </article>
 
         <!-- Free Spinning -->
-        <article class="card" id="spin">
+        <article class="card02" id="spin">
           <div class="card-head">
             <div class="icon-wrap" style="background:linear-gradient(135deg,#d9b3ff,var(--accent1))">
               <!-- SVG wheel -->
@@ -681,7 +669,7 @@
         </article>
 
         <!-- Ad Clicking -->
-        <article class="card" id="ads">
+        <article class="card02" id="ads">
           <div class="card-head">
             <div class="icon-wrap" style="background:linear-gradient(135deg,#89b6ff,#a8d0ff)">
               <!-- SVG cursor -->
@@ -726,7 +714,7 @@
         </article>
 
         <!-- Invite Friends -->
-        <article class="card" id="invite">
+        <article class="card02" id="invite">
           <div class="card-head">
             <div class="icon-wrap" style="background:linear-gradient(135deg,#ffd6b3,#ffd6b3)">
               <!-- SVG invite -->
