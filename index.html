@@ -942,36 +942,8 @@ p.lead{color:var(--muted);margin:6px 0 0}
                              </style>
 
   <div></div>
-  <!-- admin-login.html -->
-<form action="admin-login.php" method="POST" class="admin-login">
-  <h2>Admin Login</h2>
-  <input type="text" name="username" placeholder="Username" required>
-  <input type="password" name="password" placeholder="Password" required>
-  <button type="submit">Login</button>
-</form>
-
-<style>
-.admin-login {
-  width: 300px; margin: 100px auto; padding: 20px;
-  border: 1px solid #ccc; border-radius: 10px;
-}
-.admin-login input, .admin-login button {
-  width: 100%; padding: 10px; margin: 5px 0;
-}
-</style><?php
-session_start();
-
-$admin_user = "admin";
-$admin_pass = "12345"; // use hashed passwords in real apps!
-
-if ($_POST['username'] === $admin_user && $_POST['password'] === $admin_pass) {
-  $_SESSION['admin'] = true;
-  header("Location: admin-dashboard.php");
-} else {
-  echo "Invalid login!";
-}
-?>
-
+</div>
 </body>
+
 
     </html>
